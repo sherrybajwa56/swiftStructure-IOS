@@ -549,25 +549,65 @@ class MBValidator: NSObject {
             return false
         }
    }
-    
+    class func getLength(_ mobileNumber: String?) -> Int {
+       
+        guard let mobilenumber = mobileNumber else{
+            return 0
+        }
+        let filteredString = mobilenumber.replacingOccurrences(of: "[^0-9]", with:"", options: .regularExpression, range: nil).trimmingCharacters(in: CharacterSet.whitespaces)
+        
+        let length: Int = filteredString.characters.count
+        return length
+    }
     class func formatNumber( mobilenumber: String?) -> String {
         
-        guard var mobileNumber = mobilenumber else {
-            
+        guard let mobileNumber = mobilenumber else {
             return ""
         }
-        mobileNumber = mobileNumber.replacingOccurrences(of: "(", with: "")
-        mobileNumber = mobileNumber.replacingOccurrences(of: ")", with: "")
-        mobileNumber = mobileNumber.replacingOccurrences(of: " ", with: "")
-        mobileNumber = mobileNumber.replacingOccurrences(of: "-", with: "")
-        mobileNumber = mobileNumber.replacingOccurrences(of: "+", with: "")
-        print("\(mobileNumber)")
-        let length: Int = mobileNumber.characters.count
-        if length > 10 {
-            mobileNumber = mobileNumber.substring(from: length-10)//mobileNumber.substring(from: Double(length) - 10)
-            print("\(mobileNumber)")
-        }
-        return mobileNumber
+        let result = mobileNumber.replacingOccurrences(of: "[^0-9]", with:"", options:.regularExpression, range: nil).trimmingCharacters(in: CharacterSet.whitespaces)
+
+        return result
     }
+    
+//    class func textField(_ textField: UITextField, changeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if (string == "*") || (string == "+") || (string == "#") || (string == ".") || (string == ",") || (string == ";") {
+//            return false
+//        }
+//        let length: Int = MBValidator.getLength(textField.text)
+//        if length == 10 {
+//            if range.length == 0 {
+//                return false
+//            }
+//        }
+//        var newString: String = textField.text?.replacingCharacters(in: range, with: string)
+//
+//        let charactersToRemove = CharacterSet.alphanumerics.inverted
+//
+//        newString = (newString.components(separatedBy: charactersToRemove) as NSArray).componentsJoined(byString: "")
+//
+//        let expression: String = "^([0-9]+)?(\\.([0-9]{1,2})?)?$"
+//        let regex = try? NSRegularExpression(pattern: expression, options: .caseInsensitive)
+//        let numberOfMatches: Int? = regex?.numberOfMatches(in: newString, options: [], range: NSRange(location: 0, length: newString.length()))
+//        if numberOfMatches == 0 {
+//            return false
+//        }
+//        if length == 3 {
+//            let num: String = MBValidator.formatNumber(textField.text)
+//            textField.text = "(\(num))"
+//            if range.length > 0 {
+//                textField.text = "\(num as? NSString)?.substring(to: 3)"
+//            }
+//        }
+//       else if length == 6 {
+//            let num: String = MBValidator.formatNumber(textField.text)
+//            //NSLog(@"%@",[num  substringToIndex:3]);
+//            //NSLog(@"%@",[num substringFromIndex:3]);
+//            textField.text = "(\(num as? NSString)?.substring(to: 3)) \(num as? NSString)?.substring(from: 3)-"
+//            if range.length > 0 {
+//                textField.text = "(\(num as? NSString)?.substring(to: 3)) \(num as? NSString)?.substring(from: 3)"
+//            }
+//        }
+//        return true
+//    }
 
 }
