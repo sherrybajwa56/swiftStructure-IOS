@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139D9944FD0E904E8E738B3A /* Pods_structureCoversionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C330DD056AC7AC003093F /* Pods_structureCoversionDemo.framework */; };
 		E9462F4E1F6A6962005DE0F1 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9462F4D1F6A6962005DE0F1 /* CreditCardValidator.swift */; };
+		E98291071F73AA32008CE3BE /* AppDataBaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98291061F73AA32008CE3BE /* AppDataBaseHandler.swift */; };
 		E9BD23261F691C8700FC97D0 /* NSDate+MB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD23171F691C8700FC97D0 /* NSDate+MB.swift */; };
 		E9BD23271F691C8700FC97D0 /* NSString+SB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD23181F691C8700FC97D0 /* NSString+SB.swift */; };
 		E9BD23281F691C8700FC97D0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD231A1F691C8700FC97D0 /* AppConstants.swift */; };
@@ -21,7 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12EF9F3F453F4FF762FF42B6 /* Pods-structureCoversionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-structureCoversionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo.release.xcconfig"; sourceTree = "<group>"; };
+		532C330DD056AC7AC003093F /* Pods_structureCoversionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_structureCoversionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A32E28D3EE0031859A70073 /* Pods-structureCoversionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-structureCoversionDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E9462F4D1F6A6962005DE0F1 /* CreditCardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
+		E98291061F73AA32008CE3BE /* AppDataBaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDataBaseHandler.swift; path = ../../../../../../../../Documents/AppDataBaseHandler.swift; sourceTree = "<group>"; };
+		E98291081F73CC5A008CE3BE /* structureConvertionDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "structureConvertionDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9BD23171F691C8700FC97D0 /* NSDate+MB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+MB.swift"; sourceTree = "<group>"; };
 		E9BD23181F691C8700FC97D0 /* NSString+SB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+SB.swift"; sourceTree = "<group>"; };
 		E9BD231A1F691C8700FC97D0 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -41,12 +48,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139D9944FD0E904E8E738B3A /* Pods_structureCoversionDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CFAE7528DD19648D2FB75C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				532C330DD056AC7AC003093F /* Pods_structureCoversionDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7952AFB9E928D604CEE7AAD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E28D3EE0031859A70073 /* Pods-structureCoversionDemo.debug.xcconfig */,
+				12EF9F3F453F4FF762FF42B6 /* Pods-structureCoversionDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E98291051F73A9FA008CE3BE /* DataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E98291061F73AA32008CE3BE /* AppDataBaseHandler.swift */,
+			);
+			path = DataHandler;
+			sourceTree = "<group>";
+		};
 		E9BD23161F691C8700FC97D0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +118,8 @@
 		E9BD231D1F691C8700FC97D0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E98291051F73A9FA008CE3BE /* DataHandler */,
 				E9BD231E1F691C8700FC97D0 /* AppInitializer */,
-				E9BD231F1F691C8700FC97D0 /* DataHandler */,
 				E9BD23201F691C8700FC97D0 /* ErrorUtility */,
 				E9BD23211F691C8700FC97D0 /* Notification manager */,
 				E9BD23221F691C8700FC97D0 /* validator */,
@@ -100,13 +133,6 @@
 			children = (
 			);
 			path = AppInitializer;
-			sourceTree = "<group>";
-		};
-		E9BD231F1F691C8700FC97D0 /* DataHandler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataHandler;
 			sourceTree = "<group>";
 		};
 		E9BD23201F691C8700FC97D0 /* ErrorUtility */ = {
@@ -158,9 +184,12 @@
 		E9DD0E0B1F61639400548578 = {
 			isa = PBXGroup;
 			children = (
+				E98291081F73CC5A008CE3BE /* structureConvertionDemo-Bridging-Header.h */,
 				E9462F4D1F6A6962005DE0F1 /* CreditCardValidator.swift */,
 				E9DD0E161F61639400548578 /* structureCoversionDemo */,
 				E9DD0E151F61639400548578 /* Products */,
+				7952AFB9E928D604CEE7AAD1 /* Pods */,
+				24CFAE7528DD19648D2FB75C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9DD0E291F61639400548578 /* Build configuration list for PBXNativeTarget "structureCoversionDemo" */;
 			buildPhases = (
+				4B510B0672B18EB7BF9B7C2D /* [CP] Check Pods Manifest.lock */,
 				E9DD0E101F61639400548578 /* Sources */,
 				E9DD0E111F61639400548578 /* Frameworks */,
 				E9DD0E121F61639400548578 /* Resources */,
+				031E744B26DDF7509993618C /* [CP] Embed Pods Frameworks */,
+				A28EC3D4AD5E23A1D01E0248 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,11 +294,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		031E744B26DDF7509993618C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B510B0672B18EB7BF9B7C2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-structureCoversionDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A28EC3D4AD5E23A1D01E0248 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9DD0E101F61639400548578 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98291071F73AA32008CE3BE /* AppDataBaseHandler.swift in Sources */,
 				E9DD0E1A1F61639400548578 /* ViewController.swift in Sources */,
 				E9BD23281F691C8700FC97D0 /* AppConstants.swift in Sources */,
 				E9DD0E201F61639400548578 /* structureCoversionDemo.xcdatamodeld in Sources */,
@@ -395,26 +487,32 @@
 		};
 		E9DD0E2A1F61639400548578 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A32E28D3EE0031859A70073 /* Pods-structureCoversionDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DFV639RNDK;
 				INFOPLIST_FILE = structureCoversionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobikasa.test.structureCoversionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "structureConvertionDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E9DD0E2B1F61639400548578 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12EF9F3F453F4FF762FF42B6 /* Pods-structureCoversionDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DFV639RNDK;
 				INFOPLIST_FILE = structureCoversionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobikasa.test.structureCoversionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "structureConvertionDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

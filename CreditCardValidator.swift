@@ -177,43 +177,45 @@ open class CreditCardValidator{
         
         return sum % 10 == 0
     }
-    class func format(forViewing enteredNumber: String) -> String {
-        let cleaned: String = CreditCardValidator.cleanNumber(enteredNumber)
-        var len: Int = (cleaned.characters.count ?? 0)
-        if len <= CC_LEN_FOR_TYPE {
-            return cleaned
-        }
-        var r2: NSRange
-        r2.location = NSNotFound
-        var r3: NSRange
-        r3.location = NSNotFound
-        var r4: NSRange
-        r4.location = NSNotFound
-        var gaps: [Any] = ["", "", ""]
-        let segmentLengths: [Int] = [0, 0, 0]
-        switch CreditCardValidator.ccType(proposedNumber: enteredNumber) {
-        case creditCardType.visa.rawValue, creditCardType.MasterCard.rawValue, creditCardType.Discover.rawValue:
-            // { 4-4-4-4}
-            segmentLengths[0] = 4
-            segmentLengths[1] = 4
-            segmentLengths[2] = 4
-            break
-        case AMEX:
-            // {4-6-5}
-            segmentLengths[0] = 6
-            segmentLengths[1] = 5
-            break
-        case DinersClub:
-            // {4-6-4}
-            segmentLengths[0] = 6
-            segmentLengths[1] = 4
-            break
-            
-         case
-        }
-        
-    }
     
+    
+//    class func format(forViewing enteredNumber: String) -> String {
+//        let cleaned: String = CreditCardValidator.cleanNumber(enteredNumber)
+//        var len: Int = (cleaned.characters.count ?? 0)
+//        if len <= CC_LEN_FOR_TYPE {
+//            return cleaned
+//        }
+//        var r2: NSRange
+//        r2.location = NSNotFound
+//        var r3: NSRange
+//        r3.location = NSNotFound
+//        var r4: NSRange
+//        r4.location = NSNotFound
+//        var gaps: [Any] = ["", "", ""]
+//        let segmentLengths: [Int] = [0, 0, 0]
+//        switch CreditCardValidator.ccType(proposedNumber: enteredNumber) {
+//        case creditCardType.visa.rawValue, creditCardType.MasterCard.rawValue, creditCardType.Discover.rawValue:
+//            // { 4-4-4-4}
+//            segmentLengths[0] = 4
+//            segmentLengths[1] = 4
+//            segmentLengths[2] = 4
+//            break
+//        case AMEX:
+//            // {4-6-5}
+//            segmentLengths[0] = 6
+//            segmentLengths[1] = 5
+//            break
+//        case DinersClub:
+//            // {4-6-4}
+//            segmentLengths[0] = 6
+//            segmentLengths[1] = 4
+//            break
+//            
+//         case
+//        }
+//        
+//    }
+//    
 //    class func isLuhnValid(_ number: String) -> Bool {
 //        let baseNumber: String = number.replacingOccurrences(of: " ", with: "")
 //        var total: Int = 0
