@@ -114,7 +114,7 @@ extension Date {
         return formatter.string(from: self)
     }
     
-    var shortString : String{
+    var shortString : String {
         
         return self.stringWithDateStyle(dateStyle:.short, time: .short)
     }

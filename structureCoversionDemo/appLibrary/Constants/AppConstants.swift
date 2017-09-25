@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Reachability
+import ReachabilitySwift
 
 struct AppConstants {
     
@@ -24,19 +24,20 @@ struct AppConstants {
     static var K_BADGE_COUNT: String = "badgeCount"
     
      // Date Format
-     static var K_DATE_MMDDYY: String = "MM/dd/yy"
-     static var K_DATE_MMDDYYYY: String = "MM/dd/yyyy"
-     static var K_DATE_WITHTIME: String = "yyyy-MM-dd HH:mm:ss"
-    
+    static var K_DATE_MMDDYY: String = "MM/dd/yy"
+    static var K_DATE_MMDDYYYY: String = "MM/dd/yyyy"
+    static var K_DATE_WITHTIME: String = "yyyy-MM-dd HH:mm:ss"
 
     let APP_NAME = Bundle.main.object(forInfoDictionaryKey: "MBBundleName")
     
     static func isReachableToInternet() -> Bool{
-    
-        return true
+     
+        return  (Reachability()?.isReachable)!
+        
     }
     
     static func resetDefaults() {
+        
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
     
@@ -46,30 +47,61 @@ struct AppConstants {
         UserDefaults.standard.synchronize()
     }
     func GET_USER_DEFAULTS(KEY: String) -> Any {
+        
         return UserDefaults.standard.object(forKey: KEY) ?? ""
+        
     }
     func REMOVE_USER_DEFAULTSFOR(KEY: String) {
+        
          UserDefaults.standard.removeObject(forKey: KEY)
     }
     
      static let SCREEN_SIZE : CGSize = {
+        
             return UIScreen.main.bounds.size
     }()
     
-  static func HIDE_NETWORK_PROGRESS() {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+     static func HIDE_NETWORK_PROGRESS() {
     
+       if isReachableToInternet(){
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+
+       }
     }
- 
     static let APP_DELEGATE : AppDelegate = {
         
-       return AppDelegate.sharedInstance
+        return AppDelegate.sharedInstance
     }()
+    
     static let APP_WINDOW : UIWindow? = {
         
         return AppConstants.APP_DELEGATE.window
     }()
-   
+    
+    static let IS_NETWORK_REACHABLE : Bool = {
+        
+        return isReachableToInternet()
+    }()
+
+    static func SHOW_NETWORK_PROGRESS() {
+        
+        if isReachableToInternet(){
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+         
+         }
+     }
+    
+    static func SHOW_PROGRESS() {
+        
+        if isReachableToInternet(){
+           
+           
+        }
+    }
+    
+    
 }
 
 //#define SHOW_NETWORK_PROGRESS (IS_NETWORK_REACHABLE) ? [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES] : nil

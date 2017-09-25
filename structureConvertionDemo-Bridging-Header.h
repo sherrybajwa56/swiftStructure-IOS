@@ -8,5 +8,5 @@
 
 #ifndef structureConvertionDemo_Bridging_Header_h
 #define structureConvertionDemo_Bridging_Header_h
-#import <SVProgressHUD/SVProgressHUD.h>
+#import "SVProgressHUD/SVProgressHUD.h"
 #endif /* structureConvertionDemo_Bridging_Header_h */
