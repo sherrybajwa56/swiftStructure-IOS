@@ -203,6 +203,4 @@ extension Date {
         return ((components1?.year)! == ((components2?.year)! - 1))
     }
 
-    
-    
 }

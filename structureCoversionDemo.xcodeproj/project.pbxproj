@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		139D9944FD0E904E8E738B3A /* Pods_structureCoversionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532C330DD056AC7AC003093F /* Pods_structureCoversionDemo.framework */; };
-		E9462F4E1F6A6962005DE0F1 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9462F4D1F6A6962005DE0F1 /* CreditCardValidator.swift */; };
-		E98291071F73AA32008CE3BE /* AppDataBaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98291061F73AA32008CE3BE /* AppDataBaseHandler.swift */; };
+		E97531ED1F7E687200741986 /* UIFont+MB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97531EC1F7E687200741986 /* UIFont+MB.swift */; };
+		E9B07AE21F7CD8B100293DD4 /* UIView+MB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B07AE11F7CD8B100293DD4 /* UIView+MB.swift */; };
+		E9B07AE61F7CDA7800293DD4 /* EveryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B07AE51F7CDA7800293DD4 /* EveryPage.swift */; };
 		E9BD23261F691C8700FC97D0 /* NSDate+MB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD23171F691C8700FC97D0 /* NSDate+MB.swift */; };
 		E9BD23271F691C8700FC97D0 /* NSString+SB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD23181F691C8700FC97D0 /* NSString+SB.swift */; };
 		E9BD23281F691C8700FC97D0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD231A1F691C8700FC97D0 /* AppConstants.swift */; };
@@ -26,9 +27,10 @@
 		12EF9F3F453F4FF762FF42B6 /* Pods-structureCoversionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-structureCoversionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo.release.xcconfig"; sourceTree = "<group>"; };
 		532C330DD056AC7AC003093F /* Pods_structureCoversionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_structureCoversionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A32E28D3EE0031859A70073 /* Pods-structureCoversionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-structureCoversionDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		E9462F4D1F6A6962005DE0F1 /* CreditCardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
-		E98291061F73AA32008CE3BE /* AppDataBaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDataBaseHandler.swift; path = ../../../../../../../../Documents/AppDataBaseHandler.swift; sourceTree = "<group>"; };
+		E97531EC1F7E687200741986 /* UIFont+MB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+MB.swift"; sourceTree = "<group>"; };
 		E98291081F73CC5A008CE3BE /* structureConvertionDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "structureConvertionDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9B07AE11F7CD8B100293DD4 /* UIView+MB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MB.swift"; sourceTree = "<group>"; };
+		E9B07AE51F7CDA7800293DD4 /* EveryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryPage.swift; sourceTree = "<group>"; };
 		E9BD23171F691C8700FC97D0 /* NSDate+MB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+MB.swift"; sourceTree = "<group>"; };
 		E9BD23181F691C8700FC97D0 /* NSString+SB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+SB.swift"; sourceTree = "<group>"; };
 		E9BD231A1F691C8700FC97D0 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -75,16 +77,26 @@
 		E98291051F73A9FA008CE3BE /* DataHandler */ = {
 			isa = PBXGroup;
 			children = (
-				E98291061F73AA32008CE3BE /* AppDataBaseHandler.swift */,
 			);
 			path = DataHandler;
+			sourceTree = "<group>";
+		};
+		E9B07AE01F7CD83500293DD4 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				E9B07AE51F7CDA7800293DD4 /* EveryPage.swift */,
+			);
+			name = BaseClass;
+			path = appLibrary/BaseClass;
 			sourceTree = "<group>";
 		};
 		E9BD23161F691C8700FC97D0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				E9BD23171F691C8700FC97D0 /* NSDate+MB.swift */,
+				E9B07AE11F7CD8B100293DD4 /* UIView+MB.swift */,
 				E9BD23181F691C8700FC97D0 /* NSString+SB.swift */,
+				E97531EC1F7E687200741986 /* UIFont+MB.swift */,
 			);
 			name = Categories;
 			path = appLibrary/Categories;
@@ -185,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				E98291081F73CC5A008CE3BE /* structureConvertionDemo-Bridging-Header.h */,
-				E9462F4D1F6A6962005DE0F1 /* CreditCardValidator.swift */,
 				E9DD0E161F61639400548578 /* structureCoversionDemo */,
 				E9DD0E151F61639400548578 /* Products */,
 				7952AFB9E928D604CEE7AAD1 /* Pods */,
@@ -204,6 +215,7 @@
 		E9DD0E161F61639400548578 /* structureCoversionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E9B07AE01F7CD83500293DD4 /* BaseClass */,
 				E9BD23161F691C8700FC97D0 /* Categories */,
 				E9BD23191F691C8700FC97D0 /* Constants */,
 				E9BD231B1F691C8700FC97D0 /* Custom Classes */,
@@ -302,12 +314,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-structureCoversionDemo/Pods-structureCoversionDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -360,15 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98291071F73AA32008CE3BE /* AppDataBaseHandler.swift in Sources */,
 				E9DD0E1A1F61639400548578 /* ViewController.swift in Sources */,
+				E9B07AE61F7CDA7800293DD4 /* EveryPage.swift in Sources */,
 				E9BD23281F691C8700FC97D0 /* AppConstants.swift in Sources */,
+				E97531ED1F7E687200741986 /* UIFont+MB.swift in Sources */,
 				E9DD0E201F61639400548578 /* structureCoversionDemo.xcdatamodeld in Sources */,
 				E9BD232C1F691D5C00FC97D0 /* MBValidator.swift in Sources */,
 				E9BD23271F691C8700FC97D0 /* NSString+SB.swift in Sources */,
+				E9B07AE21F7CD8B100293DD4 /* UIView+MB.swift in Sources */,
 				E9DD0E181F61639400548578 /* AppDelegate.swift in Sources */,
 				E9BD23261F691C8700FC97D0 /* NSDate+MB.swift in Sources */,
-				E9462F4E1F6A6962005DE0F1 /* CreditCardValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

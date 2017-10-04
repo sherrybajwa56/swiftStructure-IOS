@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 import ReachabilitySwift
+import PKHUD
 
 struct AppConstants {
-    
+ 
     static var K_USERPASS: String = "password"
     static var K_ACCESSTOKEN: String = "AccessToken"
     static var K_USERNAME: String = "username"
@@ -27,6 +28,13 @@ struct AppConstants {
     static var K_DATE_MMDDYY: String = "MM/dd/yy"
     static var K_DATE_MMDDYYYY: String = "MM/dd/yyyy"
     static var K_DATE_WITHTIME: String = "yyyy-MM-dd HH:mm:ss"
+    
+    //font name
+    
+    static let K_THEME_FONT_REGULAR = "helvetica"
+    static let K_THEME_FONT_BOLD = "helvetica-bold"
+    static let K_THEME_FONT_SEMIBOLD = "helvetica-semibold"
+    
 
     let APP_NAME = Bundle.main.object(forInfoDictionaryKey: "MBBundleName")
     
@@ -93,14 +101,19 @@ struct AppConstants {
          }
      }
     
-    static func SHOW_PROGRESS() {
+    static func SHOW_PROGRESS(onView view: UIView? = nil) {
         
         if isReachableToInternet(){
            
-           
+           // PKHUD.sharedHUD.show(onView:view)
         }
     }
     
+    static func getUniqueIdentifier() -> NSString {
+        
+        return UIDevice.current.identifierForVendor!.uuidString as NSString
+        
+    }
     
 }
 
@@ -139,27 +152,6 @@ struct AppConstants {
 //
 //#define ENDEDITING [self.view.window endEditing:YES]
 //
-//#define BUTTON_ACTION(v,w) [v  addTarget:self action:@selector(w) forControlEvents:UIControlEventTouchUpInside]
+//#define BUTTON_ACTION(v,w) 
 
 
-//extension NSObject{
-//    
-//        static var K_USERPASS: String = "password"
-//        static var K_ACCESSTOKEN: String = "AccessToken"
-//        static var K_USERNAME: String = "username"
-//        static var K_GUIDELABEL: String = "GuideLabel"
-//        static var K_SESSIONTOKEN: String = "X-User-Token"
-//        static var K_MASTERDATA_CHECKSUM: String = "masterData_Checksum"
-//        static var K_USERID: String = "USERID"
-//        static var K_DEVICE_TOKEN: String = "device_token"
-//        static var K_DEVICE_ID: String = "device_id"
-//        static var K_BADGE_COUNT: String = "badgeCount"
-//    
-//         // Date Format
-//         static var K_DATE_MMDDYY: String = "MM/dd/yy"
-//         static var K_DATE_MMDDYYYY: String = "MM/dd/yyyy"
-//         static var K_DATE_WITHTIME: String = "yyyy-MM-dd HH:mm:ss"
-//    
-//}
-//
-//
