@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension UIFont{
     enum fontType: Int {
         case Regular = 0

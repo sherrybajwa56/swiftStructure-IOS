@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
-
+import Alamofire
 extension String {
     
     func splitWith(_ character: String, atIndex index: Int) -> String {
         var array: [String] = self.components(separatedBy: character)
+        
        // return (array.MB_safeObjectAtIndex(index)) ?? ""
         return array[index]
     }

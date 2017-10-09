@@ -13,8 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-         HUD.flash(.success, delay: 2.0)
+        
+      MBServiceManager.getallDataAPI()
+        
+//         HUD.flash(.success, delay: 2.0)
         
         //  print(AppConstants.IS_NETWORK_REACHABLE)
         
